@@ -1,0 +1,8 @@
+Your task is to translate a given piece of text from {} to {}.
+When translating, you must ensure the intimacy level of the translation matches the intimacy level of the original text.
+Keep in mind that intimacy varies across cultures, so a direct word-for-word translation may not always ensure the intimacy level will match that of the original text.
+
+This is the text you need to translate:
+{}
+
+Now, translate the text so that the translation also has the same intimacy level. Output only the translation.

@@ -1,0 +1,28 @@
+Your task is to translate a given piece of text from {} to {}.
+When translating, you must ensure the formality level of the translation matches the formality level of the original text.
+Keep in mind that formality varies across cultures, so a direct word-for-word translation may not always ensure the formality level will match that of the original text.
+
+This is the text you need to translate:
+{}
+
+This text has a formality level of {} out of 1 in {}.
+
+To help you translate the text in a way that preserves formality, here are some examples of text that have the same formality level in {}.
+Pay attention to the way formality is expressed in these examples, and try to reflect it similarly in your translation.
+[example 1]
+{}
+
+[example 2]
+{}
+
+[example 3]
+{}
+
+[example 4]
+{}
+
+[example 5]
+{}
+
+Now, translate the above text to preserve the content of the message, while also making sure the formality level is similar to the above examples.
+Specifically, the translation should also have a formality level of {} out of 1 in {}. Output only the translation.

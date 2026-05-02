@@ -1,0 +1,28 @@
+Your task is to translate a given piece of text from {} to {}.
+When translating, you must ensure the intimacy level of the translation matches the intimacy level of the original text.
+Keep in mind that intimacy varies across cultures, so a direct word-for-word translation may not always ensure the intimacy level will match that of the original text.
+
+This is the text you need to translate:
+{}
+
+This text has an intimacy level of {} out of 5 in {}.
+
+To help you translate the text in a way that preserves intimacy, here are some examples of text that have the same intimacy level in {}.
+Pay attention to the way intimacy is expressed in these examples, and try to reflect it similarly in your translation.
+[example 1]
+{}
+
+[example 2]
+{}
+
+[example 3]
+{}
+
+[example 4]
+{}
+
+[example 5]
+{}
+
+Now, translate the above text to preserve the content of the message, while also making sure the intimacy level is similar to the above examples.
+Specifically, the translation should also have an intimacy level of {} out of 5 in {}. Output only the translation.

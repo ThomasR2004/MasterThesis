@@ -1,0 +1,24 @@
+Your task is to translate a given piece of text from {} to {}.
+When translating, you must ensure the politeness level of the translation matches the politeness level of the original text.
+Keep in mind that politeness varies across cultures, so a direct word-for-word translation may not always ensure the politeness level will match that of the original text.
+
+This is the text you need to translate:
+{}
+
+To help you translate the text in a way that preserves politeness, here are some examples of text in {}.
+[example 1]
+{}
+
+[example 2]
+{}
+
+[example 3]
+{}
+
+[example 4]
+{}
+
+[example 5]
+{}
+
+Now, translate the text so that the translation also has the same politeness level. Output only the translation.
