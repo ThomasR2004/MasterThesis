@@ -1,0 +1,26 @@
+#!/bin/bash
+#SBATCH --job-name=build_vllm_container
+#SBATCH --output=/gpfs/home2/%u/llm-translate/MasterThesis/pipeline/logs/build_%j.out
+#SBATCH --error=/gpfs/home2/%u/llm-translate/MasterThesis/pipeline/logs/build_%j.err
+#SBATCH --time=02:00:00
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --partition=genoa
+
+PROJECT_DIR="$SLURM_SUBMIT_DIR"
+
+# Where the finished .sif will be saved (same folder as job script)
+OUTPUT_SIF="$PROJECT_DIR/vllm_hunyuan.sif"
+
+# Apptainer needs scratch space for temp files during build
+export APPTAINER_TMPDIR="/scratch-shared/$USER/apptainer_tmp"
+export APPTAINER_CACHEDIR="/scratch-shared/$USER/apptainer_cache"
+mkdir -p "$APPTAINER_TMPDIR" "$APPTAINER_CACHEDIR"
+
+echo "Build started at: $(date)"
+echo "Output image: $OUTPUT_SIF"
+
+apptainer build "$OUTPUT_SIF" "$PROJECT_DIR/vllm_hunyuan.def"
+
+echo "Build finished at: $(date)"
+echo "Container saved to: $OUTPUT_SIF"

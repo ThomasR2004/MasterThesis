@@ -1,0 +1,29 @@
+Bootstrap: docker
+From: nvidia/cuda:12.6.3-cudnn-devel-ubuntu24.04
+
+%post
+    apt-get update -q && \
+    apt-get install -y python3-pip python3-dev git && \
+    apt-get clean
+
+    # Ubuntu 24.04 ships Python 3.12 — create python symlink
+    ln -s /usr/bin/python3 /usr/bin/python
+
+    # Let vllm pull in its own torch dependency
+    pip3 install --no-cache-dir --break-system-packages \
+        vllm==0.19.0 \
+        transformers==4.56.0 \
+        numpy \
+        pandas \
+        tqdm \
+        huggingface_hub \
+        scipy \
+        peft 
+
+%environment
+    export PYTHONUNBUFFERED=1
+
+%labels
+    vllm 0.19.0
+    transformers 4.56.0
+    model tencent/Hunyuan-MT-7B
